@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Workspace: VS Code Type Command",
+      "command": "${input:YourCommandID}",
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [
+    {
+      "id": "YourCommandID",
+      "type": "command",
+      "command": "default:type",
+      "args": {
+        "text": "YourCustomText"
+      }
+    }
+  ]
+}

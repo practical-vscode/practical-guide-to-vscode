@@ -1,0 +1,28 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "SubCommand: Hello Multiple Command",
+        "type": "shell",
+        "command": "echo Hello Multiple Command",
+      },
+      {
+        "label": "SubCommand: CloseSidebar",
+        "command": "${command:workbench.action.closeSidebar}",
+      },
+      {
+        "label": "SubCommand: Open Settings Page",
+        "command": "${command:workbench.action.openSettings2}"
+      },
+      {
+        "label": "UI-Command: Open Settings Page",
+        "dependsOn": [
+          "SubCommand: Hello Multiple Command", 
+          "SubCommand: ToggleSidebar", 
+          "SubCommand: Open Settings Page"
+        ],
+        "dependsOrder": "sequence",
+        "problemMatcher": []
+      }
+    ]
+  }

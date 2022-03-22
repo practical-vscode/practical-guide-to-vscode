@@ -1,0 +1,15 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Workspace: hello shell command",
+            "type": "shell",
+            "command": "echo hello shell command!",
+            "presentation": {
+                "panel": "shared",
+                "reveal": "silent"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

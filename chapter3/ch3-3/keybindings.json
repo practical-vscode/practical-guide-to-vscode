@@ -1,0 +1,7 @@
+[
+  {
+    "key": "alt+d",
+    "command": "workbench.action.tasks.runTask",
+    "args": "Workspace: hello shell command"
+  }
+]
