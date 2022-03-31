@@ -1,0 +1,101 @@
+{
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>"],
+      "commands": ["whichkey.show"]
+    },
+    {
+      "before": ["B"],
+      "commands": [
+        "whichkey.show",
+        {
+          "command": "whichkey.triggerKey",
+          "args": "b"
+        }
+      ]
+    }
+  ],
+  "whichkey.bindingOverrides": [
+    {
+      "keys": "g.D",
+      "name": "Diff branch: search and compare with current branch",
+      "type": "command",
+      "command": "gitlens.views.searchAndCompare.searchCommits"
+    },
+    {
+      "keys": "g.d",
+      "name": "Git: discard change",
+      "type": "command",
+      "command": "git.clean"
+    },
+    {
+      "keys": "t",
+      "name": "Todo Tree...",
+      "type": "bindings",
+      "bindings": [
+        {
+          "key": "c",
+          "name": "Todo Tree: Collapse Tree",
+          "type": "command",
+          "command": "todo-tree.collapse"
+        },
+        {
+          "key": "e",
+          "name": "Todo Tree: Expand Tree",
+          "type": "command",
+          "command": "todo-tree.expand"
+        },
+        {
+          "key": "f",
+          "name": "Todo Tree: Filter Tree",
+          "type": "command",
+          "command": "todo-tree.filter"
+        },
+        {
+          "key": "s",
+          "name": "Todo Tree: Show TODOs",
+          "type": "command",
+          "command": "workbench.view.extension.todo-tree-container"
+        },
+        {
+          "key": "S",
+          "name": "Todo Tree: focus todo view",
+          "type": "command",
+          "command": "todo-tree-view.focus"
+        },
+        {
+          "key": "t",
+          "name": "Todo Tree: Switch View Types",
+          "type": "bindings",
+          "command": "todo-tree-view.focus",
+          "bindings": [
+            {
+              "key": "s",
+              "name": "Todo Tree: Show Tags Only View",
+              "type": "command",
+              "command": "todo-tree.showTagsOnlyView"
+            },
+            {
+              "key": "t",
+              "name": "Todo Tree: Show Tree View",
+              "type": "command",
+              "command": "todo-tree.showTreeView"
+            },
+            {
+              "key": "f",
+              "name": "Todo Tree: Show Flat View",
+              "type": "command",
+              "command": "todo-tree.showFlatView"
+            }
+          ]
+        },
+        {
+          "key": "c",
+          "name": "Todo Tree: Collapse Tree",
+          "type": "command",
+          "command": "todo-tree.collapse"
+        }
+      ]
+    }
+  ]
+}

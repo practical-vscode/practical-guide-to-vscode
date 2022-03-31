@@ -1,0 +1,12 @@
+[
+  {
+    "key": "space",
+    "command": "whichkey.show",
+    "when": "!editorFocus && !inputFocus && !textInputFocus && !inputBoxFocus && !terminalFocus"
+  },
+  {
+    // MacOS Config, Linux/Windows User can use ctrl+m or another shortcut
+    "key": "cmd+m",
+    "command": "whichkey.show"
+  }
+]
