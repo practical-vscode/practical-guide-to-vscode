@@ -1,0 +1,49 @@
+[
+  // Ch6.3 Example
+  {
+    "key": "ctrl+f",
+    "command": "cursorWordEndRight",
+    "when": "editorTextFocus && !inDebugRepl && vim.active && vim.use<C-f> && vim.mode == 'Insert'"
+  },
+  {
+    "key": "ctrl+b",
+    "command": "cursorWordLeft",
+    "when": "editorTextFocus && !inDebugRepl && vim.active && vim.use<C-b> && vim.mode == 'Insert'"
+  },
+  /*
+   * Ch6.5 Examples
+   */
+  {
+    "key": "cmd+shift+j",
+    "command": "type",
+    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'",
+    "args": {
+      "text": "}"
+    }
+  },
+  {
+    "key": "cmd+shift+j",
+    "command": "type",
+    "args": {
+      "text": "}"
+    },
+    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+  },
+  {
+    "key": "cmd+shift+k",
+    "command": "type",
+    "args": {
+      "text": "{"
+    },
+    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+  },
+  // 此處範例快捷鍵與上面cmd+shift+j快捷鍵重複，實務上請擇一使用
+  {
+    "key": "cmd+shift+j",
+    "command": "vim.remap",
+    "args": {
+      "after": ["}"]
+    },
+    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+  }
+]

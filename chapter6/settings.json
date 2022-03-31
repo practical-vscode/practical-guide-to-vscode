@@ -1,0 +1,46 @@
+{
+  "vim.insertModeKeyBindings": [
+    // Ch6.1: Example 1
+    {
+      "before": ["i", "i"],
+      "after": ["<Esc>"]
+    },
+    // Ch6.1: Example 2 (此處的i, i為示範，實務上請避免重新綁定兩次)
+    {
+      "before": ["i", "i"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    }
+  ],
+  // Ch6.1: Example 3
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["i", "i"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["<Esc>"],
+      "after": ["i", "i"]
+    }
+  ],
+  // Ch6.4 Example
+  "vim.operatorPendingModeKeyBindings": [
+    {
+      "before": ["h"],
+      "after": ["^"]
+    },
+    {
+      "before": ["l"],
+      "after": ["$"]
+    },
+    {
+      "before": ["K"],
+      "after": ["%"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["K"],
+      "after": ["%"]
+    }
+  ]
+}
