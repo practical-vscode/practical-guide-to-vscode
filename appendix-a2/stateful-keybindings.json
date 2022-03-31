@@ -1,0 +1,112 @@
+{
+    "title": "Custom key-bindings",
+    "rules": [
+        {
+            "description": "Stateful Keybindings",
+            "manipulators": [
+                {
+                    "description": "[Stateful Keybindings] Set State Variable to 1",
+                    "manipulators": [
+                        {
+                            "type": "basic",
+                            "from": {
+                                "simultaneous": [
+                                    {
+                                        "key_code": "fn"
+                                    },
+                                    {
+                                        "key_code": "left_command"
+                                    }
+                                ]
+                            },
+                            "to": [
+                                {
+                                    "set_variable": {
+                                        "name": "shift-bindings",
+                                        "value": 1
+                                    }
+                                },
+                                {
+                                    "shell_command": "osascript -e 'display notification \"Enable shift bindings !\" with title \"-- SHIFT_BINDINGS_ON --\"'",
+                                    "halt": true
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "type": "variable_if",
+                                    "name": "shift-bindings",
+                                    "value": 0
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "description": "[Stateful Keybindings] Set State Variable to 0",
+                    "manipulators": [
+                        {
+                            "type": "basic",
+                            "from": {
+                                "simultaneous": [
+                                    {
+                                        "key_code": "fn"
+                                    },
+                                    {
+                                        "key_code": "left_command"
+                                    }
+                                ]
+                            },
+                            "to": [
+                                {
+                                    "set_variable": {
+                                        "name": "shift-bindings",
+                                        "value": 0
+                                    }
+                                },
+                                {
+                                    "shell_command": "osascript -e 'display notification \"Enable shift bindings !\" with title \"-- SHIFT_BINDINGS_ON --\"'",
+                                    "halt": true
+                                }
+                            ],
+                            "conditions": [
+                                {
+                                    "type": "variable_if",
+                                    "name": "shift-bindings",
+                                    "value": 1
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "description": "Enable keybindings when state(shift-bindings) is 1",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "spacebar",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_shift"
+                        }
+                    ],
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "shift-bindings",
+                            "value": 1
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
