@@ -6,7 +6,7 @@
 
 後續作者與該主題的相關文章不在此限，若在其他平台發佈文章或相關資訊，亦會盡可能同步到這個Repository。無償的知識共享，發布進度可能隨作者自身的狀況調整，在不影響分享者的生活、工作、健康的前提下，分享相關的知識與內容。
 
-範例相關程式的license，比照[Examples from Practical Vim by Drew Neil](https://github.com/rxedu/practical-vim/blob/master/README.md)，可用於個人或公司專案，學習、使用、複製、修改，但請勿在未聯繫作者並取的同意的情況下將其用於相關訓練課程、文章、書籍或相關素材。
+範例相關程式的license，比照[Examples from Practical Vim by Drew Neil](https://github.com/rxedu/practical-vim/blob/master/README.md)，可用於個人或公司專案，學習、使用、複製、修改，但請勿在未聯繫作者並取得的同意的情況下將其用於相關訓練課程、文章、書籍或相關素材。
 
 ## License
 
