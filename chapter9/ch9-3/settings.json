@@ -1,0 +1,81 @@
+{
+    "multiCommand.commands": {
+        "multiCommand.easyMotion.w": {
+          "sequence": [
+            { "command": "type", "args": { "text": "<leader>" } },
+            { "command": "type", "args": { "text": "<leader>" } },
+            { "command": "type", "args": { "text": "w" } }
+          ]
+        },
+        "multiCommand.easyMotion.s": {
+          "sequence": [
+            { "command": "type", "args": { "text": "<leader>" } },
+            { "command": "type", "args": { "text": "<leader>" } },
+            { "command": "type", "args": { "text": "s" } }
+          ]
+        },
+        "multiCommand.easyMotion./": {
+          "sequence": [
+            { "command": "type", "args": { "text": "<leader>" } },
+            { "command": "type", "args": { "text": "<leader>" } },
+            { "command": "type", "args": { "text": "/" } }
+          ]
+        },
+        "multiCommand.bracketStart": {
+          "sequence": [
+            { "command": "type", "args": { "text": "[" } },
+            { "command": "type", "args": { "text": "{" } }
+          ]
+        },
+        "multiCommand.bracketEnd": {
+          "sequence": [
+            { "command": "type", "args": { "text": "]" } },
+            { "command": "type", "args": { "text": "}" } }
+          ]
+        },
+        "multiCommand.paste": {
+          "sequence": [
+            { "command": "type", "args": { "text": "\"" } },
+            { "command": "type", "args": { "text": "*" } },
+            { "command": "type", "args": { "text": "p" } },
+            { "command": "type", "args": { "text": "<Esc>" } }
+          ]
+        },
+        // trigger when has selection
+        "multiCommand.copy": {
+          "sequence": [
+            "editor.action.clipboardCopyAction",
+            "extension.vim_escape"
+          ]
+        },
+        "multiCommand.saveFile": {
+          "sequence": ["workbench.action.files.save", "extension.vim_escape"]
+        },
+        "multiCommand.openBracket": {
+          "sequence": [
+            { "command": "type", "args": { "text": " {}" } },
+            { "command": "type", "args": { "text": "<left>" } },
+            { "command": "type", "args": { "text": "\n" } }
+          ]
+        },
+        "multiCommand.expand[": {
+          "sequence": [
+            { "command": "type", "args": { "text": " []" } },
+            { "command": "type", "args": { "text": "<left>" } },
+            { "command": "type", "args": { "text": "\n" } }
+          ]
+        },
+        "multiCommand.completeStmt": {
+          "label": "completion statement",
+          "description": "completion statement",
+          // 此處語法噪音多，可以改為使用vim.remap或自己Extension的客製化命令。
+          "sequence": [
+            { "command": "type", "args": { "text": "<right>" } },
+            { "command": "type", "args": { "text": ";" } },
+            { "command": "type", "args": { "text": "<left>" } },
+            { "command": "type", "args": { "text": "<left>" } },
+            { "command": "type", "args": { "text": "\n" } }
+          ]
+        }
+      }
+}

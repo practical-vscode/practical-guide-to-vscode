@@ -1,0 +1,13 @@
+{
+  "key": "cmd+k cmd+s",
+  "command": "extension.multiCommand.execute",
+  "args": {
+    "sequence": [
+      { "command": "type", "args": { "text": "^" } },
+      { "command": "type", "args": { "text": "i" } },
+      "cursorLineEndSelect",
+      "surround.with"
+    ]
+  },
+  "when": "editorFocus && vim.active && vim.mode == 'Normal'"
+}

@@ -1,0 +1,62 @@
+[
+  /**
+   * ============ Find Widget ============
+   */
+  {
+    "key": "cmd+k",
+    "command": "editor.action.previousMatchFindAction",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "cmd+j",
+    "command": "editor.action.nextMatchFindAction",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  // *** overrided shorcut ***
+  {
+    "key": "shift+f3",
+    "command": "-editor.action.previousMatchFindAction",
+    "when": "editorFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-editor.action.nextMatchFindAction",
+    "when": "editorFocus && findInputFocussed"
+  },
+  /**
+   * Custom Multi Command keyboard shortcut
+   */
+  {
+    "key": "escape",
+    "command": "extension.multiCommand.execute",
+    "args": {
+      "sequence": ["closeFindWidget", "cancelSelection"]
+    },
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "multiCommand.easyMotion./",
+    "when": " vim.active && !inDebugRepl && vim.mode == 'Normal'"
+  },
+  /*
+   * 此處設定書裡為了通用、避免覆蓋Vim內建ctrl+f快捷鍵，使用ctrl+shift+f的快捷鍵。
+   * 作者本身將此處命令綁定在ctrl+f快捷鍵上，若有翻動頁面或移動游標的需求，
+   * 則是在Normal Mode另外綁定相關命令至up/down。 
+   */
+  {
+    "key": "ctrl+shift+f",
+    "command": "multiCommand.easyMotion.s",
+    "when": " vim.active && !inDebugRepl && vim.mode == 'Normal'"
+  },
+  {
+    "key": "shift+down",
+    "command": "multiCommand.bracketEnd",
+    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+  },
+  {
+    "key": "shift+up",
+    "command": "multiCommand.bracketStart",
+    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+  }
+]

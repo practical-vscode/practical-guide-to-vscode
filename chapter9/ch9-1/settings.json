@@ -1,0 +1,7 @@
+{
+  // 此處為適用於MacOS的設定
+  "vim.autoswitchinputmethod.defaultim": "com.apple.keylayout.abc",
+  "vim.autoswitchinputmethod.enable": true,
+  "vim.autoswitchinputmethod.obtainimcmd": "/usr/local/bin/im-select",
+  "vim.autoswitchinputmethod.switchimcmd": "/usr/local/bin/im-select {im}"
+}
