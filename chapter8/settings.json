@@ -1,0 +1,13 @@
+{
+  "vim.normalModeKeyBindings": [
+    // Ch8.4
+    {
+      "before": ["g", "f"],
+      "commands": ["references-view.findReferences"]
+    },
+    {
+      "before": ["g", "i"],
+      "commands": ["editor.action.goToImplementation"]
+    }
+  ]
+}

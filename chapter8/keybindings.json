@@ -1,0 +1,116 @@
+[
+  /**
+   * ============ Ch8.1.2 Find Suggestion ============
+   */
+  {
+    "key": "cmd+k",
+    "command": "editor.action.previousMatchFindAction",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "cmd+j",
+    "command": "editor.action.nextMatchFindAction",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "escape",
+    "command": "closeFindWidget",
+    "when": "editorFocus && findWidgetVisible"
+  },
+  // *** overrided shorcut ***
+  {
+    "key": "ctrl+cmd+r",
+    "command": "editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "alt+cmd+f",
+    "command": "-editor.action.startFindReplaceAction",
+    "when": "editorFocus || editorIsOpen"
+  },
+  {
+    "key": "shift+f3",
+    "command": "-editor.action.previousMatchFindAction",
+    "when": "editorFocus"
+  },
+  {
+    "key": "enter",
+    "command": "-editor.action.nextMatchFindAction",
+    "when": "editorFocus && findInputFocussed"
+  },
+  //  ============ Ch8.3.1 ============
+  {
+    "key": "cmd+shift+l",
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+  },
+  {
+    "key": "cmd+shift+h",
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "editorFocus && vim.active && !inDebugRepl && vim.mode == 'Normal'"
+  },
+  /**
+   * o=============== Ch8.3.2 Cmd: Compare Editor ===============o
+   */
+  {
+    "key": "cmd+j",
+    "command": "workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorActive && textCompareEditorVisible"
+  },
+  {
+    "key": "cmd+k",
+    "command": "workbench.action.compareEditor.previousChange",
+    "when": "textCompareEditorActive && textCompareEditorVisible"
+  },
+  {
+    "key": "shift+cmd+l",
+    "command": "workbench.action.compareEditor.focusPrimarySide",
+    "when": "textCompareEditorActive && textCompareEditorVisible"
+  },
+  {
+    "key": "shift+cmd+h",
+    "command": "workbench.action.compareEditor.focusSecondarySide",
+    "when": "textCompareEditorActive && textCompareEditorVisible"
+  },
+  // *** overrided shorcut: ctrl+alt+right ***
+  {
+    "key": "alt+f5",
+    "command": "-workbench.action.compareEditor.nextChange",
+    "when": "textCompareEditorVisible"
+  },
+  {
+    "key": "shift+alt+f5",
+    "command": "-workbench.action.compareEditor.previousChange",
+    "when": "textCompareEditorVisible"
+  },
+  /**
+   * o=============== Ch8.4.4 ===============o
+   */
+  {
+    "key": "ctrl+shift+o",
+    "command": "workbench.action.navigateBack"
+  },
+  {
+    "key": "ctrl+shift+i",
+    "command": "workbench.action.navigateForward"
+  },
+  // *** overrided shorcut ***
+  {
+    "key": "ctrl+-",
+    "command": "-workbench.action.navigateBack"
+  },
+  {
+    "key": "ctrl+shift+-",
+    "command": "-workbench.action.navigateForward"
+  },
+  /**
+   * o=============== Ch8.4.5 ===============o
+   *
+   * 此處的ctrl+tab快捷鍵為作者用於MacOS上的快捷鍵。
+   *
+   */
+  {
+    "key": "ctrl+tab",
+    "command": "workbench.action.switchWindow"
+  }
+]
