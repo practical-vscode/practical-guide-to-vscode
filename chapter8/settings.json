@@ -9,5 +9,7 @@
       "before": ["g", "i"],
       "commands": ["editor.action.goToImplementation"]
     }
+    // 註：VSCodeVim內建gb命令用於選取相同文字，筆者更偏好使用ctrl+d進行相同操作，
+    // 鍵位配置更舒適且有效率。
   ]
 }
